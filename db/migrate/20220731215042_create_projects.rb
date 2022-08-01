@@ -10,8 +10,6 @@ class CreateProjects < ActiveRecord::Migration[7.0]
       t.string :github_url
       t.datetime :created_at
       t.datetime :updated_at
-
-      t.timestamps
     end
   end
 end
