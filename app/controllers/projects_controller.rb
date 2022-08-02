@@ -24,7 +24,7 @@ class ProjectsController < ApplicationController
   def delete
     project = find_project
     project.destroy
-    head :no_content
+    head :no_content, status: :deleted
   end
 
   private 
