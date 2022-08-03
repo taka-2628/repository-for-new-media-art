@@ -27,13 +27,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_01_230405) do
   end
 
   create_table "project_genres", force: :cascade do |t|
-    t.string "project_id"
-    t.string "genre_id"
+    t.integer "project_id"
+    t.integer "genre_id"
   end
 
   create_table "project_technologies", force: :cascade do |t|
-    t.string "project_id"
-    t.string "technology_id"
+    t.integer "project_id"
+    t.integer "technology_id"
   end
 
   create_table "projects", force: :cascade do |t|

@@ -2,7 +2,6 @@ puts "🌱 Seeding data..."
 # Seed the database here
 
 puts "Seeding users..."
-#deleted for security reasons 
 
 puts "Seeding projects..."
 Project.create([
