@@ -5,14 +5,6 @@ import '../stylesheets/App.css';
 import Sidebar from './Sidebar';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
-
   const [ projects, setProjects ] = useState([]);
   const [ users, setUsers ] = useState([]);
   const [ genres, setGenres ] = useState([]);
@@ -46,8 +38,6 @@ function App() {
       <div className="App">
         <Sidebar genres={genres} technologies={technologies}/>
         <Routes>
-          <Route path="/testing" element={<h1>Test Route</h1>} />
-          <Route path="/" element={<h1>Page Count: {count}</h1>} />
         </Routes>
       </div>
     </BrowserRouter>
