@@ -41,9 +41,11 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Sidebar genres={genres} technologies={technologies}/>
-        <Routes>
-          <Route exact path="/" element={<Grid data={projects} setSelected={setSelected}/>}/>
-        </Routes>
+        <main>
+          <Routes>
+            <Route exact path="/" element={<Grid data={projects} setSelected={setSelected}/>}/>
+          </Routes>
+        </main>
       </div>
     </BrowserRouter>
   );
