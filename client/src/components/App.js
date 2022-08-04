@@ -11,6 +11,11 @@ function App() {
       .then((data) => setCount(data.count));
   }, []);
 
+  const [ projects, setProjects ] = useState([]);
+  const [ users, setUsers ] = useState([]);
+  const [ genres, setGenres ] = useState([]);
+  const [ technologies, setTechnologies ] = useState([]);
+
   useEffect(() => {
     Promise.all([
       fetch('/projects'),
@@ -27,10 +32,10 @@ function App() {
       const genres = data[2];
       const technologies = data[3];
       
-      console.log(projects);
-      console.log(users);
-      console.log(genres);
-      console.log(technologies);
+      setProjects(projects);
+      setUsers(users);
+      setGenres(genres);
+      setTechnologies(technologies);
     })
   }, []);
 
