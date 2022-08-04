@@ -11,6 +11,9 @@ function App() {
   const [ genres, setGenres ] = useState([]);
   const [ technologies, setTechnologies ] = useState([]);
 
+  const [ currentUser, setCurrentUser ] = useState(null);
+  const [ selected, setSelected ] = useState("");
+
   useEffect(() => {
     Promise.all([
       fetch('/projects'),
