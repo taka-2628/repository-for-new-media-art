@@ -4,6 +4,7 @@ import '../stylesheets/App.css';
 
 import Sidebar from './Sidebar';
 import Grid from './Grid';
+import Project from './Project';
 
 function App() {
   const [ projects, setProjects ] = useState([]);
@@ -44,6 +45,9 @@ function App() {
         <main>
           <Routes>
             <Route exact path="/" element={<Grid data={projects} setSelected={setSelected}/>}/>
+            <Route path="/project" element={
+              <Project selected={selected} currentUser={currentUser} setCurrentUser={setCurrentUser} users={users} projects={projects} setProjects={setProjects}/>
+            }/>
           </Routes>
         </main>
       </div>
