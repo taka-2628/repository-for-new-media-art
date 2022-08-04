@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import '../stylesheets/App.css';
 
 import Sidebar from './Sidebar';
+import Grid from './Grid';
 
 function App() {
   const [ projects, setProjects ] = useState([]);
@@ -38,6 +39,7 @@ function App() {
       <div className="App">
         <Sidebar genres={genres} technologies={technologies}/>
         <Routes>
+          <Route exact path="/" element={<Grid data={projects} setSelected={setSelected}/>}/>
         </Routes>
       </div>
     </BrowserRouter>
