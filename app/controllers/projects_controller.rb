@@ -4,12 +4,12 @@ class ProjectsController < ApplicationController
 
   def index
     projects = Project.all
-    render json: projects
+    render json: projects, include: ['user', 'comments', 'comments.user', 'genres', 'technologies']
   end
 
   def show
     project = find_project
-    render json: project
+    render json: project, include: ['user', 'comments', 'comments.user', 'genres', 'technologies']
   end
 
   def create
