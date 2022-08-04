@@ -2,6 +2,32 @@ puts "🌱 Seeding data..."
 # Seed the database here
 
 puts "Seeding users..."
+User.create([
+  {
+    username: "taka-2628",
+    password: "takataka",
+    profile_image: "https://avatars.githubusercontent.com/u/77429137?v=4",
+    intro: "Architectural Designer turned Creative Developer/Product Designer",
+    website: "https://takashi-honzawa.com/",
+    github: "https://github.com/taka-2628"
+  },
+  {
+    username: "th",
+    password: "takatakataka",
+    profile_image: "https://archinect.imgix.net/uploads/45/45761a2b087dab7cc5cb74b1accecf13.jpg?fit=crop&auto=compress%2Cformat&w=300",
+    intro: "Architectural Designer",
+    website: "",
+    github: ""
+  },
+  {
+    username: "jojo",
+    password: "Jojojo",
+    profile_image: "https://images.squarespace-cdn.com/content/v1/6097ecb813c4e77969c1bf95/b4904932-c224-43c9-a6e4-3cac4f65bba5/JO+HEE.jpg",
+    intro: "XR Designer & Developer",
+    website: "https://youraveragejojo.com/",
+    github: "https://github.com/jl5639"
+  }
+])
 
 puts "Seeding projects..."
 Project.create([
