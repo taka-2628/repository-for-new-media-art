@@ -69,7 +69,7 @@ function App() {
               <Signup setCurrentUser={setCurrentUser}/>
             } />
             <Route exact path="/signin" element={
-              <Login />
+              <Login setCurrentUser={setCurrentUser}/>
             } />
           </Routes>
         </main>
