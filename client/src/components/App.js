@@ -18,6 +18,15 @@ function App() {
   const [ currentUser, setCurrentUser ] = useState(null);
   const [ selected, setSelected ] = useState("");
 
+  // auto-login
+  useEffect(() => {
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setCurrentUser(user));
+      }
+    });
+  }, []);
+
   useEffect(() => {
     Promise.all([
       fetch('/projects'),
