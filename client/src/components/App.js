@@ -6,6 +6,8 @@ import Sidebar from './Sidebar';
 import Grid from './Grid';
 import Project from './Project';
 import Submit from "./Submit";
+import Signup from "./Signup";
+import Login from "./Login";
 
 function App() {
   const [ projects, setProjects ] = useState([]);
@@ -42,15 +44,23 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Sidebar genres={genres} technologies={technologies}/>
+        <Sidebar genres={genres} technologies={technologies} />
         <main>
           <Routes>
-            <Route exact path="/" element={<Grid data={projects} setSelected={setSelected}/>}/>
+            <Route exact path="/" element={
+              <Grid data={projects} setSelected={setSelected}/>
+            } />
             <Route path="/project" element={
               <Project selected={selected} currentUser={currentUser} setCurrentUser={setCurrentUser} users={users} projects={projects} setProjects={setProjects}/>
-            }/>
+            } />
             <Route exact path="/submit-your-art" element={
               <Submit genres={genres} technologies={technologies} currentUser={currentUser} setCurrentUser={setCurrentUser} users={users}/>
+            } />
+            <Route exact path="/create-your-profile" element={
+              <Signup />
+            } />
+            <Route exact path="/signin" element={
+              <Login />
             } />
           </Routes>
         </main>

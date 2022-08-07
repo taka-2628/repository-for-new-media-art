@@ -36,6 +36,20 @@ function NavBar(){
       >
         Submit
       </NavLink>
+      <NavLink
+        to="/create-your-profile"
+        exact="true"
+        className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
+      >
+        Sign up
+      </NavLink>
+      <NavLink
+        to="/signin"
+        exact="true"
+        className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
+      >
+        Log in
+      </NavLink>
     </nav>
   )
 }
