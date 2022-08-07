@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import "../stylesheets/Comment.css";
 
-import Comment from "./Comment";
-import LoginSignup from "../LoginSignup";
-import CommentForm from "./CommentForm";
+import Comment from "./comment/Comment";
+import LoginSignup from "./LoginSignup";
+import CommentForm from "./comment/CommentForm";
 
 function CommentSection( { selected, comments, currentUser, setCurrentUser, users, projects, setProjects } ){
 
