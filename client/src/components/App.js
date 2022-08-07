@@ -44,7 +44,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Sidebar genres={genres} technologies={technologies} />
+        <Sidebar genres={genres} technologies={technologies} currentUser={currentUser}/>
         <main>
           <Routes>
             <Route exact path="/" element={

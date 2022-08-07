@@ -1,7 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function NavBar(){
+function NavBar( { currentUser } ){
+
   return (
     <nav>
       <NavLink
@@ -11,24 +12,6 @@ function NavBar(){
       >
         Home
       </NavLink>
-      {/*
-      <NavLink
-        to="/about"
-        exact="true"
-        className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
-      >
-        About
-      </NavLink>
-      */}
-      {/*
-      <NavLink    
-        to="/my-page"
-        exact="true"
-        className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
-      >
-        My Page
-      </NavLink>
-      */}
       <NavLink    
         to="/submit-your-art"
         exact="true"
@@ -36,20 +19,41 @@ function NavBar(){
       >
         Submit
       </NavLink>
-      <NavLink
-        to="/create-your-profile"
-        exact="true"
-        className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
-      >
-        Sign up
-      </NavLink>
-      <NavLink
-        to="/signin"
-        exact="true"
-        className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
-      >
-        Log in
-      </NavLink>
+
+      <hr></hr>
+
+      {
+        currentUser ? 
+        <>
+          <NavLink    
+            to="/my-page"
+            exact="true"
+            className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
+          >
+            My Page
+          </NavLink>
+          <button>
+            Logout
+          </button>
+        </> :
+        <>
+          <NavLink
+            to="/create-your-profile"
+            exact="true"
+            className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
+          >
+            Sign up
+          </NavLink>
+          <NavLink
+            to="/signin"
+            exact="true"
+            className={({ isActive }) => (isActive ? "active-link" : "non-active-link")}
+          >
+            Log in
+          </NavLink>
+        </>
+      }
+      
     </nav>
   )
 }
