@@ -5,6 +5,7 @@ import '../stylesheets/App.css';
 import Sidebar from './Sidebar';
 import Grid from './Grid';
 import Project from './Project';
+import Submit from "./Submit";
 
 function App() {
   const [ projects, setProjects ] = useState([]);
@@ -48,6 +49,9 @@ function App() {
             <Route path="/project" element={
               <Project selected={selected} currentUser={currentUser} setCurrentUser={setCurrentUser} users={users} projects={projects} setProjects={setProjects}/>
             }/>
+            <Route exact path="/submit-your-art" element={
+              <Submit genres={genres} technologies={technologies} currentUser={currentUser} setCurrentUser={setCurrentUser} users={users}/>
+            } />
           </Routes>
         </main>
       </div>

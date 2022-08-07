@@ -1,0 +1,103 @@
+#submit {
+  width: 50%;
+  padding: 25px;
+}
+
+#submit h1 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 2.5em;
+}
+
+#upload-project {
+  width: calc(100% - 50px);
+  height: calc(100vh -50px);
+  color: #D86356;
+}
+
+#upload-project h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2.5em;
+  width: 66.666%;
+}
+
+#upload-project hr {
+  border-top: 1px solid #D86356;
+  margin: 20px 0;
+}
+
+#upload-project form {
+  width: 66.666%;
+  /*background-color: #f2f2f2;*/
+}
+
+#upload-project label {
+  font-size: 0.75em;
+}
+
+#upload-project input {
+  display: block;
+}
+#upload-project input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(216,99,86, 0.75);
+  opacity: 1; /* Firefox */
+}
+#upload-project input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(216,99,86, 0.75);
+}
+
+#upload-project input::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(216,99,86, 0.75);
+}
+
+#upload-project textarea {
+  width: 100%;
+}
+#upload-project textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(216,99,86, 0.75);
+  opacity: 1; /* Firefox */
+}
+#upload-project textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(216,99,86, 0.75);
+}
+#upload-project textarea::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(216,99,86, 0.75);
+}
+
+#upload-project div.i-block {
+  width: 50%;
+  display: inline-block;
+}
+
+#upload-project input[type=checkbox] {
+  display: inline-block;
+}
+
+#upload-project input[type=text], select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #D86356;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#upload-project textarea {
+  display: block;
+}
+
+#upload-project input[type=submit] {
+  width: 100%;
+  background-color: #D86356;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#upload-project input[type=submit]:hover {
+  background-color: #ca4e40;
+}
+
