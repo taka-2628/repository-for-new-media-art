@@ -57,7 +57,7 @@ function App() {
               <Submit genres={genres} technologies={technologies} currentUser={currentUser} setCurrentUser={setCurrentUser} users={users}/>
             } />
             <Route exact path="/create-your-profile" element={
-              <Signup />
+              <Signup setCurrentUser={setCurrentUser}/>
             } />
             <Route exact path="/signin" element={
               <Login />
