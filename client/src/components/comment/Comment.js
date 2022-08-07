@@ -3,9 +3,9 @@ import "../stylesheets/Comment.css";
 
 import EditComment from "./EditComment";
 
-import anonymousIcon from "../assets/anonymous-user-icon.png";
-import editIcon from "../assets/edit-icon.png";
-import deleteIcon from "../assets/delete-icon.png";
+import anonymousIcon from "../../assets/anonymous-user-icon.png";
+import editIcon from "../../assets/edit-icon.png";
+import deleteIcon from "../../assets/delete-icon.png";
 
 function Comment( { comment, currentUser, onDeleteComment, onEditComment} ){
   const [ editOn, setEditOn ] = useState(false);

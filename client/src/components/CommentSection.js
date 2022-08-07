@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import "../stylesheets/Comment.css";
 
 import Comment from "./Comment";
-import LoginSignup from "./LoginSignup";
+import LoginSignup from "../LoginSignup";
 import CommentForm from "./CommentForm";
 
 function CommentSection( { selected, comments, currentUser, setCurrentUser, users, projects, setProjects } ){
