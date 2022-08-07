@@ -1,7 +1,7 @@
 import React from "react";
 
-import NavBar from "./NavBar";
-import Filter from "./Filter";
+import NavBar from "./sidebar/NavBar";
+import Filter from "./sidebar/Filter";
 
 function Sidebar( { genres, technologies } ){
   return (
