@@ -53,7 +53,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Sidebar genres={genres} technologies={technologies} currentUser={currentUser}/>
+        <Sidebar genres={genres} technologies={technologies} currentUser={currentUser} setCurrentUser={setCurrentUser}/>
         <main>
           <Routes>
             <Route exact path="/" element={
