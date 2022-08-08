@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {useNavigate} from 'react-router-dom';
 
 function Signup( { setCurrentUser } ){
   const [username, setUsername] = useState("");
@@ -10,6 +11,8 @@ function Signup( { setCurrentUser } ){
   const [githubUrl, setGithubUrl] = useState("");
 
   const [errors, setErrors] = useState([]);
+
+  const navigate = useNavigate();
 
   function handleSubmit(e){
     e.preventDefault();  
@@ -30,7 +33,10 @@ function Signup( { setCurrentUser } ){
       }),
     }).then((r) => {
       if (r.ok) {
-        r.json().then((user) => setCurrentUser(user));
+        r.json().then((user) => {
+          setCurrentUser(user);
+          navigate("/");
+        });
       } else {
         r.json().then((err) => setErrors(err.errors));
       }
