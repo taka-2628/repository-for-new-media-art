@@ -41,9 +41,12 @@ function NavBar( { currentUser, setCurrentUser } ){
           >
             My Page
           </NavLink>
-          <button onClick={handleLogout}>
+          <span
+            id="logout-btn"
+            onClick={handleLogout}
+          >
             Logout
-          </button>
+          </span>
         </> :
         <>
           <NavLink

@@ -55,6 +55,20 @@ nav a:hover {
   text-decoration: none;
 }
 
+#logout-btn {
+  border: none;
+  display: block;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #D86356;
+  padding: 5px 0;
+  cursor: pointer;
+}
+#logout-btn:hover {
+  font-style: italic;
+  text-decoration: none;
+}
+
 /* SIDEBAR BOTTOM*/
 #sidebar-bottom {
   height: calc(50% - 50px);
