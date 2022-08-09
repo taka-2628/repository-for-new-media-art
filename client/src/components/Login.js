@@ -49,7 +49,7 @@ function Login( { setCurrentUser } ){
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <input type="submit" value="Submit"/>
+          <input type="submit" value="Login"/>
         </form>
       </div>
     </div>

@@ -1,39 +1,31 @@
 #signup, #login {
-  height: calc(100vh - 50px);
-  width: calc(100% - 50px);
-  padding: 25px;
-  position: relative;
+  height: 100vh;
+  width: 33.333%;
+  /*background: rgba(216,99,86, 0.1)*/
 }
 
 .login-signup-container {
-  width: 30%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  border: 1px solid #D86356;
-  background: rgba(216,99,86, 0.1); 
-  text-align: center;
+  width: calc(100% - 50px);
+  padding-top: 25px;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 .login-signup-container h1 {
-  margin-top: 12px;
+  margin-top: 0;
   margin-bottom: 12px;
-  font-size: 2.25em;
+  font-size: 2.5em;
 }
 .login-signup-container form {
   text-align: left;
 }
 .login-signup-container label {
-  margin-left: 12px; 
   font-size: 0.75em;
 }
 .login-signup-container input{
-  height: 1.25em;
-  width: calc(100% - 36px);
+  width: calc(100% - 14px);
   display: block;
-  margin: 6px 12px 12px 12px;
-  padding: 5px;
+  margin: 6px 0px 12px 0px;
+  padding: 6px;
   border: 1px solid #D86356;
   background-color: #E9E8DD;
   color: #D86356;
@@ -42,7 +34,7 @@
 }
 .login-signup-container input:focus {
   height: calc(1.25em - 1.5pt);
-  width: calc(100% - 38px);
+  width: calc(100% - 16px);
   outline: none;
   border: 2px solid #D86356;
 }
@@ -62,9 +54,9 @@
 
 .login-signup-container textarea {
   height: 3em;
-  width: calc(100% - 36px);
-  margin: 6px 12px 12px 12px;
-  padding: 5px;
+  width: calc(100% - 14px);
+  margin: 6px 0px 12px 0px;
+  padding: 6px;
   border: 1px solid #D86356;
   background-color: #E9E8DD;
   color: #D86356;
@@ -74,7 +66,7 @@
 }
 .login-signup-container textarea:focus {
   height: calc(3em - 1.5pt);
-  width: calc(100% - 38px);
+  width: calc(100% - 16px);
   outline: none;
   border: 2px solid #D86356;
 }
@@ -93,10 +85,10 @@
 }
 
 .login-signup-container input[type="submit"]{
-  height: 2em;
-  width: calc(30% - 18px);
-  margin: 16px auto;
-  padding: 3px;
+  width: 100%;
+  margin-top: 24px;
+  padding-top: 6px;
+  padding-bottom: 8px;
   border: 1px solid #D86356;
   background-color: #D86356;
   color: #ffffff;

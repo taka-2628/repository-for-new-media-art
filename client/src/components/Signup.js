@@ -108,7 +108,7 @@ function Signup( { setCurrentUser } ){
             placeholder="URL for your GitHub"
             onChange={(e) => setGithubUrl(e.target.value)}
           />
-          <input type="submit" value="Submit"/>
+          <input type="submit" value="Signup"/>
         </form>
         <div className="error-div">
           {errors.map((err) => (
