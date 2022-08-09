@@ -1,17 +1,24 @@
 #submit {
-  width: calc(100% - 50px);
-  padding: 25px;
+  height: 100vh;
+  width: 100%;
 }
 
-#submit h1 {
-  margin-top: 0;
+#before-uploading h2 {
+  margin-top: 0px;
+  margin-left: 25px;
   margin-bottom: 12px;
-  font-size: 2.5em;
+  font-size: 2em;
+}
+
+#before-uploading {
+  padding-top: 25px;
+  width: 33.333%;
 }
 
 #upload-project {
-  width: calc(100% - 50px);
-  height: calc(100vh -50px);
+  width: calc(50% - 50px);
+  height: calc(100% -50px);
+  padding: 25px;
   color: #D86356;
 }
 
