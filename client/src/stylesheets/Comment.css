@@ -131,17 +131,17 @@
 
 
 /* LOGIN & SIGNUP */
-.login-signup-container{
+.login-comment-container{
   height: 20%;
   background: rgba(216,99,86, 0.2); 
 }
-.login-signup-container h5 {
+.login-comment-container h5 {
   margin: 0;
   padding-top: 12px;
   padding-left: 12px;
   font-size: 1em;
 }
-.login-signup-container input[type="text"]{
+.login-comment-container input[type="text"]{
   height: 1.25em;
   width: calc(70% - 26px);
   margin: 12px 6px 10px 12px;
@@ -150,24 +150,24 @@
   background-color: #E9E8DD;
   color: #D86356;
 }
-.login-signup-container input[type="text"]:focus {
+.login-comment-container input[type="text"]:focus {
   height: calc(1.25em - 2pt);
   width: calc(70% - 28px);
   outline: none;
   border: 2px solid #D86356;
 }
-.login-signup-container input[type="text"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.login-comment-container input[type="text"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgba(216,99,86, 0.75);
   opacity: 1; /* Firefox */
 }
-.login-signup-container input[type="text"]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.login-comment-container input[type="text"]:-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: rgba(216,99,86, 0.75);
 }
 
-.login-signup-container input[type="text"]::-ms-input-placeholder { /* Microsoft Edge */
+.login-comment-container input[type="text"]::-ms-input-placeholder { /* Microsoft Edge */
   color: rgba(216,99,86, 0.75);
 }
-.login-signup-container input[type="submit"]{
+.login-comment-container input[type="submit"]{
   width: calc(30% - 18px);
   margin: 12px 12px 10px 6px;
   padding: 3px;
@@ -175,16 +175,16 @@
   background-color: #D86356;
   color: #ffffff;
 }
-.login-signup-container span {
+.login-comment-container span {
   padding-left: 12px;
   font-size: 0.8em;
 }
-.login-signup-container em {
+.login-comment-container em {
   margin-left: 0.5em;
   font-size: 0.8em;
   font-weight: 600;
 }
-.login-signup-container em:hover {
+.login-comment-container em:hover {
   text-decoration: underline;
 }
 

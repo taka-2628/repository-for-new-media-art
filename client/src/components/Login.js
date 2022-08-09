@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {useNavigate} from 'react-router-dom';
+import '../stylesheets/SignupLogin.css'
 
 function Login( { setCurrentUser } ){
   const [username, setUsername] = useState("");
@@ -26,29 +27,31 @@ function Login( { setCurrentUser } ){
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div id="login">
+      <div className="login-signup-container">
         <h1>Login</h1>
-        <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          autoComplete="off"
-          value={username}
-          placeholder="Username.."
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          autoComplete="current-password"
-          value={password}
-          placeholder="Password.."
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Login</button>
-      </form>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            autoComplete="off"
+            value={username}
+            placeholder="Username"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            autoComplete="current-password"
+            value={password}
+            placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <input type="submit" value="Submit"/>
+        </form>
+      </div>
     </div>
   )
 }

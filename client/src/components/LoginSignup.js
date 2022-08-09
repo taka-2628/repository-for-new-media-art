@@ -59,7 +59,7 @@ function LoginSignup( { setCurrentUser, users } ){
   return (
     <>{
       (selectedForm == "login") ? 
-      <div id="comment-login" className="login-signup-container">
+      <div id="comment-login" className="login-comment-container">
         <h5>Log in</h5>
         <form onSubmit={handleLogin}>
           <input 
@@ -72,7 +72,7 @@ function LoginSignup( { setCurrentUser, users } ){
         </form>
         <span id="switch-to-signp">Don't have a username?</span><em onClick={()=> setSelectedForm("signup")} >Sign up</em>
       </div> :
-      <div id="comment-signup" className="login-signup-container">
+      <div id="comment-signup" className="login-comment-container">
         <h5>Create username</h5>
         <form onSubmit={handleSignup}>
           <input 
