@@ -87,8 +87,7 @@
 .login-signup-container input[type="submit"]{
   width: 100%;
   margin-top: 24px;
-  padding-top: 6px;
-  padding-bottom: 8px;
+  height: 32px;
   border: 1px solid #D86356;
   background-color: #D86356;
   color: #ffffff;
