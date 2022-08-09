@@ -1,8 +1,7 @@
 import React from "react";
 import "../stylesheets/Submit.css";
 
-
-import LoginSignup from "./LoginSignup";
+import Login from "./Login";
 import ProjectForm from "./ProjectForm";
 
 function Submit( { genres, technologies, currentUser, setCurrentUser, users } ) {  
@@ -15,7 +14,7 @@ function Submit( { genres, technologies, currentUser, setCurrentUser, users } ) 
         <ProjectForm genres={genres} technologies={technologies} /> : 
         <div>
           <h1>Before you upload..</h1>
-          <LoginSignup setCurrentUser={setCurrentUser} users={users} />
+          <Login setCurrentUser={setCurrentUser} users={users} />
         </div>
       }
     </div>
