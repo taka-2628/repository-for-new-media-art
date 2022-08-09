@@ -8,6 +8,8 @@ function Submit( { genres, technologies, currentUser, setCurrentUser } ) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const [error, setError] = useState("");
+
   const navigate = useNavigate();
 
   function handleSubmit(e){
@@ -24,6 +26,8 @@ function Submit( { genres, technologies, currentUser, setCurrentUser } ) {
           setCurrentUser(user);
           navigate("/submit-your-art");
         });
+      } else {
+        r.json().then((err) => setError(err.error));
       }
     });
   }
@@ -58,8 +62,10 @@ function Submit( { genres, technologies, currentUser, setCurrentUser } ) {
               />
               <input type="submit" value="Login"/>
             </form>
+            <div className="error-div">
+              <p>{error}</p>
+            </div>
           </div>
-          
         </div>
       }
     </div>

@@ -6,6 +6,8 @@ function Login( { setCurrentUser } ){
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const [error, setError] = useState("");
+
   const navigate = useNavigate();
 
   function handleSubmit(e){
@@ -22,6 +24,8 @@ function Login( { setCurrentUser } ){
           setCurrentUser(user);
           navigate("/");
         });
+      } else {
+        r.json().then((err) => setError(err.error));
       }
     });
   }
@@ -51,6 +55,9 @@ function Login( { setCurrentUser } ){
           />
           <input type="submit" value="Login"/>
         </form>
+        <div className="error-div">
+          <p>{error}</p>
+        </div>
       </div>
     </div>
   )
