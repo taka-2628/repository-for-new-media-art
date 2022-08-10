@@ -3,6 +3,12 @@
   width: 100%;
 }
 
+/* LOGIN IN SUBMIT */
+#before-uploading {
+  padding-top: 25px;
+  width: 33.333%;
+}
+
 #before-uploading h2 {
   margin-top: 0px;
   margin-left: 25px;
@@ -10,11 +16,7 @@
   font-size: 2em;
 }
 
-#before-uploading {
-  padding-top: 25px;
-  width: 33.333%;
-}
-
+/* UPLOAD PROJECT FORM*/
 #upload-project {
   width: calc(50% - 50px);
   height: calc(100% -50px);
@@ -24,9 +26,8 @@
 
 #upload-project h1 {
   margin-top: 0;
-  margin-bottom: 0;
-  font-size: 2.5em;
-  width: 66.666%;
+  margin-bottom: 12px;
+  font-size: 2.25em;
 }
 
 #upload-project hr {
@@ -35,8 +36,7 @@
 }
 
 #upload-project form {
-  width: 66.666%;
-  /*background-color: #f2f2f2;*/
+  width: 100%;
 }
 
 #upload-project label {
@@ -44,7 +44,21 @@
 }
 
 #upload-project input {
+  width: calc(100% - 14px);
   display: block;
+  margin: 6px 0px 12px 0px;
+  padding: 6px;
+  border: 1px solid #D86356;
+  background-color: #E9E8DD;
+  color: #D86356;
+  font-family: 'Source Code Pro';
+  font-size: 0.9em;
+}
+#upload-project input:focus {
+  height: calc(1.25em - 1.5pt);
+  width: calc(100% - 16px);
+  outline: none;
+  border: 2px solid #D86356;
 }
 #upload-project input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgba(216,99,86, 0.75);
@@ -59,7 +73,22 @@
 }
 
 #upload-project textarea {
-  width: 100%;
+  height: 3em;
+  width: calc(100% - 14px);
+  margin: 6px 0px 12px 0px;
+  padding: 6px;
+  border: 1px solid #D86356;
+  background-color: #E9E8DD;
+  color: #D86356;
+  font-family: 'Source Code Pro';
+  font-size: 0.9em;
+  letter-spacing: normal;
+}
+#upload-project textarea:focus {
+  height: calc(3em - 1.5pt);
+  width: calc(100% - 16px);
+  outline: none;
+  border: 2px solid #D86356;
 }
 #upload-project textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgba(216,99,86, 0.75);
@@ -72,39 +101,115 @@
   color: rgba(216,99,86, 0.75);
 }
 
-#upload-project div.i-block {
+/* GENRES & TECHNOLOGIES */
+.fs-genres-tech {
+  margin: 0 0 12px 0;
+  border: 1px solid #D86356;
+}
+#fs-genres label.genre-tech-choices,
+#fs-tech label.genre-tech-choices {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* genre specific */
+#fs-genres .genre-tech-choices{
+  display: inline-block;
+  width: calc(50% - 35px);
+}
+
+/* tech specific */
+#fs-tech .genre-tech-choices{
+  display: block;
+  width: calc(100% - 35px);
+}
+#fs-tech .scrollable-choices-cont {
+  height: 144px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#fs-tech .cont-left {
+  margin-right: 4px;
+}
+#fs-tech .cont-right {
+  margin-left: 4px;
+}
+#fs-tech .tech-cont{
   width: 50%;
   display: inline-block;
 }
-
-#upload-project input[type=checkbox] {
-  display: inline-block;
+#fs-tech .tech-cont h5 {
+  margin: 2px 0 8px 0;
 }
 
-#upload-project input[type=text], select {
-  padding: 12px 20px;
-  margin: 8px 0;
+/* Hide the Browser's Default Checkbox */
+.fs-genres-tech input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a Custom Checkbox */
+.fs-genres-tech .custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
   border: 1px solid #D86356;
-  border-radius: 4px;
-  box-sizing: border-box;
+  background-color: #E9E8DD;
 }
 
-#upload-project textarea {
+/* Hover */
+.fs-genres-tech .custom-checkbox:hover input ~ .custom-checkbox {
+  background-color: #D86356;
+}
+
+/* Checked */
+.fs-genres-tech .custom-checkbox:hover input ~ .custom-checkbox {
+  border: 1px solid #D86356;
+  background-color: #E9E8DD;
+}
+
+/* Create Check-mark in Custom Checkbox */
+/* hide the checkmark when default check box is not checked */
+.fs-genres-tech .custom-checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* display the checkmark when checked */
+.fs-genres-tech input:checked ~ .custom-checkbox:after {
   display: block;
 }
+/* style checkmark using webkit */
+.fs-genres-tech .custom-checkbox:after {
+  top: 1px;
+  left: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #D86356;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
-#upload-project input[type=submit] {
+#upload-project input[type=submit]{
   width: 100%;
+  margin-top: 24px;
+  height: 32px;
+  border: 1px solid #D86356;
   background-color: #D86356;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  color: #ffffff;
+  font-weight: 700;
 }
-
-#upload-project input[type=submit]:hover {
-  background-color: #ca4e40;
-}
-
