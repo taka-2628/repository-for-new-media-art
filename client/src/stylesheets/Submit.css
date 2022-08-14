@@ -224,3 +224,14 @@
   color: #ffffff;
   font-weight: 700;
 }
+
+#upload-project .error-div {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+#upload-project .error-div p {
+  font-size: 0.9em;
+  margin-top: 3px;
+  margin-bottom: 0px;
+}
