@@ -226,12 +226,16 @@
 }
 
 #upload-project .error-div {
+  width: 100%;
   margin-top: 12px;
   margin-bottom: 12px;
 }
 
 #upload-project .error-div p {
-  font-size: 0.9em;
+  width: calc(50% - 4px);
+  display: inline-block;
+  font-size: 0.75em;
   margin-top: 3px;
+  margin-right: 4px;
   margin-bottom: 0px;
 }

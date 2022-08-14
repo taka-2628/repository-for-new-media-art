@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
-function ProjectForm( { genres, technologies, projects, setProjects } ){
+function ProjectForm( { genres, technologies, projects, setProjects, currentUser } ){
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("");
   const [image, setImage] = useState("");
@@ -39,6 +39,7 @@ function ProjectForm( { genres, technologies, projects, setProjects } ){
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        user_id: currentUser.id,
         title,
         subtitle,
         description,
