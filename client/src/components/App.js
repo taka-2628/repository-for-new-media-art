@@ -63,7 +63,7 @@ function App() {
               <Project selected={selected} currentUser={currentUser} setCurrentUser={setCurrentUser} users={users} projects={projects} setProjects={setProjects}/>
             } />
             <Route exact path="/submit-your-art" element={
-              <Submit genres={genres} technologies={technologies} currentUser={currentUser} setCurrentUser={setCurrentUser}/>
+              <Submit genres={genres} technologies={technologies} currentUser={currentUser} setCurrentUser={setCurrentUser} projects={projects} setProjects={setProjects}/>
             } />
             <Route exact path="/create-your-profile" element={
               <Signup setCurrentUser={setCurrentUser}/>

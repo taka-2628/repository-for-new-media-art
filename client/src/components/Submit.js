@@ -4,7 +4,7 @@ import "../stylesheets/Submit.css";
 
 import ProjectForm from "./ProjectForm";
 
-function Submit( { genres, technologies, currentUser, setCurrentUser } ) {  
+function Submit( { genres, technologies, currentUser, setCurrentUser, projects, setProjects } ) {  
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -36,7 +36,7 @@ function Submit( { genres, technologies, currentUser, setCurrentUser } ) {
     <div id="submit">
       { 
         currentUser ? 
-        <ProjectForm genres={genres} technologies={technologies} /> : 
+        <ProjectForm genres={genres} technologies={technologies} projects={projects} setProjects={setProjects} /> : 
         <div id="before-uploading">
           <h2>Please login before you upload your project..</h2>
 

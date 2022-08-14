@@ -72,8 +72,19 @@
   color: rgba(216,99,86, 0.75);
 }
 
+#upload-project .half-width {
+  display: inline-block;
+  width: calc(50% - 4px);
+}
+#upload-project .div-left {
+  margin-right: 4px;
+}
+#upload-project .div-right {
+  margin-left: 4px;
+}
+
 #upload-project textarea {
-  height: 3em;
+  height: 4em;
   width: calc(100% - 14px);
   margin: 6px 0px 12px 0px;
   padding: 6px;
@@ -85,7 +96,7 @@
   letter-spacing: normal;
 }
 #upload-project textarea:focus {
-  height: calc(3em - 1.5pt);
+  height: calc(4em - 1.5pt);
   width: calc(100% - 16px);
   outline: none;
   border: 2px solid #D86356;
