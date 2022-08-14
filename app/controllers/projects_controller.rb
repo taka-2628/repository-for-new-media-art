@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    project = Project.create(project_params)
+    project = Project.create!(project_params)
     render json: project, status: :created
   end
 

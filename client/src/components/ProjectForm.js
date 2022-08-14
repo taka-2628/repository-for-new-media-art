@@ -33,9 +33,6 @@ function ProjectForm( { genres, technologies, projects, setProjects } ){
   function handleSubmit(e){
     e.preventDefault();  
     setErrors([]);
-    console.log(genreCheckedState);
-    console.log(techCheckedState);
-    /*
     fetch("/projects", {
       method: "POST",
       headers: {
@@ -59,7 +56,6 @@ function ProjectForm( { genres, technologies, projects, setProjects } ){
         r.json().then((err) => setErrors(err.errors));
       }
     });
-    */
   }
 
   const genreChoices = genres.map((genre, index) => {
