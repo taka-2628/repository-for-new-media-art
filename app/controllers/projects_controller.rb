@@ -14,6 +14,14 @@ class ProjectsController < ApplicationController
 
   def create
     project = Project.create!(project_params)
+    genres = params[:genres]
+    technologies = params[:technologies]
+    genres.each do |genre|
+      project.project_genres.create(genre_id: genre[:id])
+    end
+    technologies.each do |tech|
+      project.project_technologies.create(technology_id: tech[:id])
+    end
     render json: project, status: :created
   end
 

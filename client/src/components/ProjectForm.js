@@ -60,13 +60,13 @@ function ProjectForm( { genres, technologies, projects, setProjects, currentUser
         image,
         url,
         github_url: github,
-        genre: selectedGenres,
-        tech: selectedTechs
+        genres: selectedGenres,
+        technologies: selectedTechs
       }),
     }).then((r) => {
       if (r.ok) {
         r.json().then((project) => {
-          setProjects({...projects, project})
+          setProjects([...projects, project])
           navigate("/");
         });
       } else {
@@ -188,12 +188,12 @@ function ProjectForm( { genres, technologies, projects, setProjects, currentUser
         
         <label htmlFor="p-desc">Project Description</label>
         <textarea 
-          type="text" 
           id="p-desc" 
           name="description"
           value={description}
-          placeholder="Describe your project..">
+          placeholder="Describe your project.."
           onChange={(e) => setDescription(e.target.value)}
+        >
         </textarea>
 
         <fieldset id="fs-genres" className="fs-genres-tech">
@@ -220,10 +220,10 @@ function ProjectForm( { genres, technologies, projects, setProjects, currentUser
         <input type="submit" value="Submit"/>
       </form>
       <div className="error-div">
-          {errors.map((err) => (
-              <p key={err} >{err}</p>
-          ))}
-        </div>
+        {errors.map((err) => (
+            <p key={err} >{err}</p>
+        ))}
+      </div>
     </div>
   )
 }
