@@ -33,6 +33,20 @@ function ProjectForm( { genres, technologies, projects, setProjects, currentUser
   function handleSubmit(e){
     e.preventDefault();  
     setErrors([]);
+
+    const selectedGenres = genreCheckedState.reduce((returns, genre, index) => {
+      if(genre){
+        returns.push({id: index + 1})
+      }
+      return returns
+    }, [])
+    const selectedTechs = techCheckedState.reduce((returns, tech, index) => {
+      if(tech){
+        returns.push({id: index + 1})
+      }
+      return returns
+    }, [])
+    
     fetch("/projects", {
       method: "POST",
       headers: {
@@ -45,7 +59,9 @@ function ProjectForm( { genres, technologies, projects, setProjects, currentUser
         description,
         image,
         url,
-        github_url: github
+        github_url: github,
+        genre: selectedGenres,
+        tech: selectedTechs
       }),
     }).then((r) => {
       if (r.ok) {
