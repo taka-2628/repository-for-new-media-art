@@ -6,7 +6,7 @@ function CommentForm( { selected, currentUser, comments, projects, setProjects }
   /* POST NEW COMMENT */
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("http://localhost:9292/comments", {
+    fetch("/comments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

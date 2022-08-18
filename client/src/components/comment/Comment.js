@@ -10,7 +10,7 @@ function Comment( { comment, currentUser, onDeleteComment, onEditComment} ){
   const [ editOn, setEditOn ] = useState(false);
 
   function handleDelete(id) {   
-    fetch(`http://localhost:9292/comments/${id}`, {
+    fetch(`/comments/${id}`, {
       method: "DELETE"
     });
     onDeleteComment(id);
