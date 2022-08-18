@@ -26,7 +26,7 @@ function Comment( { comment, currentUser, onDeleteComment, onEditComment} ){
   
   const editDelete = 
     currentUser ? 
-    (comment.user_id === currentUser.id ? 
+    (comment.user.id === currentUser.id ? 
       <div className="edit-delete">
         <img src={editIcon} onClick={() => setEditOn((editOn) => !editOn) }/>
         <img src={deleteIcon} onClick={()=>handleDelete(comment.id)}/>
